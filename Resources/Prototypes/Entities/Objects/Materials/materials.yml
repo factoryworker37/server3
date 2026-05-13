@@ -440,13 +440,13 @@
       phoronalloy:
         reagents:
         - ReagentId: Plasma
-          Quantity: 20
+          Quantity: 18
         - ReagentId: Bananium
-          Quantity: 20
+          Quantity: 18
         - ReagentId: Titanium
-          Quantity: 10
+          Quantity: 9
         - ReagentId: Phoron
-          Quantity: .2 # 5 phoron alloy to 1u Phoron reagent
+          Quantity: 1 # 1 phoron alloy to 1u Phoron reagent
         canReact: false
   - type: Material
   - type: PhysicalComposition
