@@ -31,6 +31,7 @@ using Robust.Shared.Physics.Systems;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Server.Containers;
+using Robust.Shared.Toolshed.Commands.Values;
 
 namespace Content.Server.Atmos.EntitySystems
 {
@@ -473,7 +474,7 @@ namespace Content.Server.Atmos.EntitySystems
                     continue;
                 }
 
-                bool fireproof = IsFireproof(uid);
+                bool fireproof = IsFireproof(uid, out var fireproofComponent);
 
                 if (!fireproof) _alertsSystem.ShowAlert(uid, flammable.FireAlert);
 
@@ -507,14 +508,21 @@ namespace Content.Server.Atmos.EntitySystems
                 }
                 else
                 {
+                    if (fireproof && fireproofComponent != null && TryComp<TemperatureComponent>(uid, out var temp))
+                    {
+                        var safetemp = fireproofComponent.MaxTempurature;
+                        if (temp.CurrentTemperature > safetemp)
+                            _temperatureSystem.ForceChangeTemperature(uid, safetemp, temp);
+                    }
                     Extinguish(uid, flammable);
                 }
             }
         }
 
-        public bool IsFireproof(EntityUid uid)
+        public bool IsFireproof(EntityUid uid, out FireproofComponent? comp)
         {
             var id = uid;
+            comp = null;
             if (HasComp<FireproofComponent>(uid)) return true;
 
             int iterationCount = 0;
@@ -526,10 +534,14 @@ namespace Content.Server.Atmos.EntitySystems
 
                 id = container.Owner;
                 if (TryComp<FireproofComponent>(id, out var fireproof) && fireproof.ProtectContents)
+                {
+                    comp = fireproof;
                     return true;
+                }
             }
 
             return false;
         }
+        public bool IsFireproof(EntityUid uid) => IsFireproof(uid, out _);
     }
 }
