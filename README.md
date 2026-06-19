@@ -12,6 +12,6 @@ WE ARE [[HERE]]!!
 
 ----------------------------------------
 
-<img width="2053" height="99" alt=">??? PRAY" src="https://github.com/user-attachments/assets/100d46a0-841b-4caa-a70e-dd4975cfe3ae" />
+<img width="2053" height="200" alt=">??? PRAY" src="https://github.com/user-attachments/assets/100d46a0-841b-4caa-a70e-dd4975cfe3ae" />
 
 OK [[Bye-Bye]]!!!
