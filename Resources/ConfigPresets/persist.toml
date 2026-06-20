@@ -6,7 +6,7 @@ panic_bunker.show_reason = true
 panic_bunker.custom_reason = "HEY [[buddy]. T00 M4NY !!CONNECTIONS! AT THIS $TIME.DATE$ COME BACK [in a minute]]"
 
 [hub]
-tags = "lang:en,region:am_n_w,rp:high"
+tags = "lang:en,region:am_n_w,rp:none"
 
 [server]
 rules_file = "PersistRuleset"
