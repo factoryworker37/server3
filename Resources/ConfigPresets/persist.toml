@@ -1,13 +1,9 @@
-# Configuration preset for the official Persistence SS14 server.
-# This file was written with the expectation that persistBase would be loaded first.
-# Related docs https://docs.spacestation14.com/en/general-development/tips/config-file-reference.html
-
 [game]
 soft_max_players = 150
 autosaveenabled = true
-autosaveinterval = 60
+autosaveinterval = 30
 panic_bunker.show_reason = true
-panic_bunker.custom_reason = "The server is not accepting new connections at this time."
+panic_bunker.custom_reason = "HEY [[buddy]. T00 M4NY !!CONNECTIONS! AT THIS $TIME.DATE$ COME BACK [in a minute]]"
 
 [hub]
 tags = "lang:en,region:am_n_w,rp:high"
@@ -27,7 +23,7 @@ flavor_text = true
 punctuation = true
 
 [lore]
-year_offset = 200
+year_offset = 1998
 
 [tips]
 enabled = false
@@ -37,4 +33,4 @@ max_explosion_range = 4
 
 [admin]
 new_player_threshold = 600
-alert.min_players_sharing_connection = 2
+alert.min_players_sharing_connection = 3
