@@ -8,7 +8,7 @@ THIS SERVER IS [[100% Eco-Friendly]] AND FOCUSED ON [[Divine Intervention]] AND 
 
 ------------------------------------
 
-WE ARE [[[HERE]([https://discord.gg/puEGkSvejN]) ]]!! 
+WE ARE [[[HERE](https://discord.gg/puEGkSvejN)]]!! 
 
 ----------------------------------------
 
